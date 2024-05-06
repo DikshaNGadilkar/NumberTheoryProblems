@@ -1,0 +1,18 @@
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int org=n;
+        int result=0;
+        //int rem;
+        while(n>0){
+          int  rem=n%10;
+            result += (rem*rem*rem);
+            n=n/10;
+        }
+        if(result==org){
+            return "Yes";
+        }else{
+        return "No";
+        }
+    }
+}
